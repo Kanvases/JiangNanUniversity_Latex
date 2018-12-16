@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{xeCJK}
+\usepackage{graphicx} 
+\usepackage{geometry}
+\geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
+\pagestyle{plain}
+\usepackage{array} 
+\usepackage{type1cm}
+%这里可能要改！取决于宋体在你系统上的名字。以下是MacOS
+\setCJKmainfont{Songti SC}
+
+% 题目后的下划线，自定义粗细。使用方法：\hlinew{xxpt}
+\makeatletter
+\def\hlinew#1{
+	\noalign{\ifnum0=`}\fi\hrule \@height #1 \futurelet
+	\reserved@a\@xhline}
+\makeatother
+
+%使\section中的内容左对齐
+\makeatletter 
+\renewcommand{\section}{\@startsection{section}{1}{0mm}
+	{-\baselineskip}{0.5\baselineskip}{\bf\leftline}}
+\makeatother
+
+
+\begin{document}
+	%---------------------封面---------------------------%
+	% 江南大学 图片
+	\begin{figure}
+		\centering	
+		\includegraphics[width=0.4\textwidth]{JiangNanName}
+	\end{figure}
+	
+	%大标题
+	\begin{center}
+		% 32pt 字号 48pt 1.5倍行距(32x1.5=48)
+		\fontsize{32pt}{48pt} \selectfont \textbf{\\《什么什么课》\\课程设计\\}
+	\end{center}
+	\vspace{1cm}
+	% 二标题  请不要在下行后加回车。
+	\mbox{\fontsize{22pt}{22pt} \selectfont\textbf{\\题目:}}
+	% 这里写自己的标题。 [t] 保证下划线与“题目：”对齐 	不要在上一行加回车
+	%二标题向左对齐
+	%\begin{tabular}[t]{p{0.75\textwidth}}
+	%二标题居中
+	\begin{tabular}[t]{p{0.75\textwidth}<{\centering}}
+		\fontsize{22pt}{22pt} \selectfont \textbf{这里可以写下一行的标题}\\
+		\hlinew{1pt}
+		\\
+		\fontsize{22pt}{22pt} \selectfont \textbf{需要手动换下一行}\\
+		\hlinew{1pt}
+	\end{tabular}
+
+	\vspace{2cm}
+	
+	%院系
+	\begin{center}
+	 	\fontsize{18pt}{18pt} \selectfont\underline{ 数字媒体 }学院 \underline{ 数字媒体技术 } 专业
+	\end{center}
+
+	\vspace{2cm}
+	
+	%学生信息
+	\centering
+	\mbox{
+	\fontsize{18pt}{18pt} \selectfont
+	\begin{tabular}[t]{cp{0.4\textwidth}<{\centering}}
+		
+		学\hphantom{文本}号&1030516XXX\\
+		\cline{2-2}
+		\\
+		班\hphantom{文本}级&1602\\
+		\cline{2-2}
+		\\
+		学生姓名&姓名\\
+		\cline{2-2}
+		\\
+		导师姓名&姓名\\
+		\cline{2-2}
+	\end{tabular}
+}
+
+	\vspace{2cm}
+	
+	%日期
+	\begin{center}
+		\fontsize{18pt}{18pt} \selectfont 二〇一八年十二月
+	\end{center}
+%---------------------封面完了---------------------------%
+
+
+\newpage
+\section {系统创新点}
+\section {设计的目的与要求}
+\section {总体方案设计}
+\section {各个功能模块的主要实现程序}
+\section {课程设计总结与体会}
+\section {参考文献}
+\end{document}
