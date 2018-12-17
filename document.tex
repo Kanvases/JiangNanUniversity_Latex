@@ -16,12 +16,6 @@
 	\reserved@a\@xhline}
 \makeatother
 
-%使\section中的内容左对齐
-\makeatletter 
-\renewcommand{\section}{\@startsection{section}{1}{0mm}
-	{-\baselineskip}{0.5\baselineskip}{\bf\leftline}}
-\makeatother
-
 
 \begin{document}
 	%---------------------封面---------------------------%
@@ -61,8 +55,7 @@
 	\vspace{2cm}
 	
 	%学生信息
-	\centering
-	\mbox{
+	\begin{center}
 	\fontsize{18pt}{18pt} \selectfont
 	\begin{tabular}[t]{cp{0.4\textwidth}<{\centering}}
 		
@@ -78,7 +71,7 @@
 		导师姓名&姓名\\
 		\cline{2-2}
 	\end{tabular}
-}
+	\end{center}
 
 	\vspace{2cm}
 	
